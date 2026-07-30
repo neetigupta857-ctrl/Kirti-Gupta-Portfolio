@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIRTI GUPTA — Graphic Designer & Visual Architect</title>
+  <meta name="description" content="Portfolio of Kirti Gupta, a senior Graphic Designer, UI/UX Strategist, and Visual Architect creating award-winning digital experiences.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- GSAP Scripts from local gsap-public distribution -->
+  <script src="js/gsap/gsap.min.js"></script>
+  <script src="js/gsap/ScrollTrigger.min.js"></script>
+  <script src="js/gsap/SplitText.min.js"></script>
+  <script src="js/gsap/CustomEase.min.js"></script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Fullscreen Navigation Drawer Modal -->
+  <div class="menu-modal" id="menu-modal">
+    <div class="menu-header">
+      <div class="brand-logo">KIRTI GUPTA <span></span></div>
+      <button class="menu-close" id="menu-close-btn" aria-label="Close Menu">✕</button>
+    </div>
+    <div class="menu-links">
+      <a href="#hero" class="menu-link nav-item-link">01. Home</a>
+      <a href="#about" class="menu-link nav-item-link">02. About</a>
+      <a href="#services" class="menu-link nav-item-link">03. Services</a>
+      <a href="#portfolio" class="menu-link nav-item-link">04. Selected Work</a>
+      <a href="#process" class="menu-link nav-item-link">05. Process</a>
+      <a href="#contact" class="menu-link nav-item-link">06. Contact</a>
+    </div>
+    <div class="menu-footer">
+      <div>
+        <p style="font-size: 14px; color: var(--text-white-muted);">CURRENT LOCATION</p>
+        <p style="font-weight: 700;">New Delhi, India (Global Remote)</p>
+      </div>
+      <div class="menu-socials">
+        <a href="https://dribbble.com" target="_blank" rel="noopener">Dribbble</a>
+        <a href="https://behance.net" target="_blank" rel="noopener">Behance</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Top Navbar -->
+  <header class="navbar" id="navbar">
+    <a href="#" class="brand-logo">
+      KIRTI G. <span></span>
+    </a>
+    <div class="nav-status">
+      <span class="status-dot"></span> AVAILABLE FOR Q3/Q4 PROJECTS
+    </div>
+    <button class="menu-trigger" id="menu-open-btn">
+      <span>Menu</span>
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </header>
+
+  <!-- Main App Layout Container with rounded corners -->
+  <div class="app-wrapper">
+    <main class="main-container">
+
+      <!-- LANDING HERO SECTION -->
+      <section class="section hero-section" id="hero">
+        <div class="hero-geo-container">
+          <div class="geo-item geo-ring-1" data-speed="0.2"></div>
+          <div class="geo-item geo-pill-1" data-speed="-0.3">
+            <span>✦</span> CREATIVE DIRECTION
+          </div>
+          <div class="geo-item geo-switch" data-speed="0.15">
+            <div class="geo-switch-knob">KG</div>
+          </div>
+          <svg class="geo-svg-line" viewBox="0 0 300 150">
+            <path d="M10,80 Q150,10 290,140" fill="none" stroke="#111111" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <circle cx="10" cy="80" r="5" fill="#111111"/>
+            <circle cx="290" cy="140" r="5" fill="#111111"/>
+          </svg>
+        </div>
+
+        <div class="hero-sub-badge">
+          <span>✦</span> GRAPHIC DESIGNER & VISUAL ARCHITECT
+        </div>
+
+        <div class="hero-title-wrap">
+          <h1 class="hero-title">
+            <span class="line-1">KIRTI</span>
+            <span class="line-2">
+              <span>GUPTA</span>
+            </span>
+          </h1>
+          <h2 style="font-family: var(--font-hero); font-size: clamp(40px, 6vw, 90px); font-weight: 800; text-transform: uppercase; margin-top: 10px;">
+            GRAPHIC <span class="text-stroke">DESIGNER</span>
+          </h2>
+        </div>
+
+        <p class="hero-subtitle">
+          Crafting high-impact visual identities, modern UI/UX digital products, editorial systems, and AD campaign creatives with precision typography and Swiss aesthetic.
+        </p>
+
+        <div class="hero-scroll-indicator">
+          <span>SCROLL TO EXPLORE</span>
+          <div class="scroll-circle">↓</div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="section about-section" id="about">
+        <div class="section-label">
+          <span class="dot"></span> 01 / ABOUT KIRTI
+        </div>
+
+        <h2 class="about-manifesto">
+          Turning complex ideas into meaningful, elevated digital experiences and iconic brand systems.
+        </h2>
+
+        <div class="animated-divider" id="divider-1"></div>
+
+        <div class="about-grid">
+          <div class="about-text-left">
+            <p>
+              I am a Graphic Designer & Visual Strategist specializing in luxury brand identity, high-craft digital products, editorial publication, and strategic AD campaign design.
+            </p>
+            <p>
+              My approach merges Swiss minimalist design principles with modern interactive technology. I focus on raw typographic power, intentional whitespace, and subtle micro-interactions that make digital brands unforgettable.
+            </p>
+            <div class="about-portrait-wrap">
+              <img src="assets/avatar_kirti.png" alt="Kirti Gupta Studio Portrait" loading="lazy">
+            </div>
+          </div>
+
+          <div class="about-info-right">
+            <div class="info-card">
+              <div class="info-card-label">EXPERIENCE</div>
+              <div class="info-card-value">5+ Years</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-label">LOCATION</div>
+              <div class="info-card-value">New Delhi (Global)</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-label">PROJECTS</div>
+              <div class="info-card-value">30+ Completed</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-label">AVAILABILITY</div>
+              <div class="info-card-value">Open for Q3/Q4</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section class="section services-section" id="services">
+        <div class="section-label">
+          <span class="dot"></span> 02 / SERVICES
+        </div>
+        <h2 class="section-heading">SPECIALIZATIONS & CAPABILITIES</h2>
+
+        <div class="services-list">
+
+          <!-- Service Row 1 -->
+          <div class="service-row" data-service="ux-ui">
+            <div class="service-row-main">
+              <div class="service-title-group">
+                <span class="service-num">01</span>
+                <span class="service-name">UX/UI & Product Design</span>
+              </div>
+              <div class="service-arrow">→</div>
+            </div>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <p class="service-details-desc">
+                  Building intuitive, accessible, and visual-first web and mobile user interfaces. Specialized in full design systems, high-fidelity interactive prototyping, wireframing, and user testing.
+                </p>
+                <div class="service-tags">
+                  <span class="service-tag">Figma</span>
+                  <span class="service-tag">Design Systems</span>
+                  <span class="service-tag">Wireframing</span>
+                  <span class="service-tag">User Testing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Row 2 -->
+          <div class="service-row" data-service="brand">
+            <div class="service-row-main">
+              <div class="service-title-group">
+                <span class="service-num">02</span>
+                <span class="service-name">Brand Identity & Strategy</span>
+              </div>
+              <div class="service-arrow">→</div>
+            </div>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <p class="service-details-desc">
+                  Crafting end-to-end visual identities for ambitious brands. From bespoke mark design and typography selection to comprehensive brand guideline books and collateral.
+                </p>
+                <div class="service-tags">
+                  <span class="service-tag">Brand Strategy</span>
+                  <span class="service-tag">Logo Mark</span>
+                  <span class="service-tag">Guidelines</span>
+                  <span class="service-tag">Typography</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Row 3 -->
+          <div class="service-row" data-service="ad-creatives">
+            <div class="service-row-main">
+              <div class="service-title-group">
+                <span class="service-num">03</span>
+                <span class="service-name">AD Creatives & Campaign Design</span>
+              </div>
+              <div class="service-arrow">→</div>
+            </div>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <p class="service-details-desc">
+                  High-converting performance ad graphics, billboard posters, digital display banners, and multi-channel campaign art direction tailored to maximize audience engagement.
+                </p>
+                <div class="service-tags">
+                  <span class="service-tag">Performance Ads</span>
+                  <span class="service-tag">Campaign Assets</span>
+                  <span class="service-tag">Billboard Poster</span>
+                  <span class="service-tag">Art Direction</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Row 4 -->
+          <div class="service-row" data-service="social-media">
+            <div class="service-row-main">
+              <div class="service-title-group">
+                <span class="service-num">04</span>
+                <span class="service-name">Social Media Posts & Content</span>
+              </div>
+              <div class="service-arrow">→</div>
+            </div>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <p class="service-details-desc">
+                  Curated social grid design, multi-slide educational carousels, motion graphics, and content templates designed to elevate brand authority across Instagram, LinkedIn, and Twitter.
+                </p>
+                <div class="service-tags">
+                  <span class="service-tag">Grid Strategy</span>
+                  <span class="service-tag">Carousels</span>
+                  <span class="service-tag">Motion Assets</span>
+                  <span class="service-tag">Content Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Row 5 -->
+          <div class="service-row" data-service="logo-design">
+            <div class="service-row-main">
+              <div class="service-title-group">
+                <span class="service-num">05</span>
+                <span class="service-name">LOGO Design & 3D Renders</span>
+              </div>
+              <div class="service-arrow">→</div>
+            </div>
+            <div class="service-details">
+              <div class="service-details-inner">
+                <p class="service-details-desc">
+                  Timeless geometric logo design, custom wordmarks, 3D brand assets, icon sets, and vector illustrations built with mathematical grid precision.
+                </p>
+                <div class="service-tags">
+                  <span class="service-tag">Symbol Marks</span>
+                  <span class="service-tag">Wordmarks</span>
+                  <span class="service-tag">3D Assets</span>
+                  <span class="service-tag">Vector Art</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PORTFOLIO SECTION -->
+      <section class="section portfolio-section" id="portfolio">
+        <div class="portfolio-header">
+          <div>
+            <div class="section-label"><span class="dot"></span> 03 / PORTFOLIO</div>
+            <h2 class="section-heading" style="margin-bottom: 0;">SELECTED PROJECTS</h2>
+          </div>
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 16px;">(2024 — 2026)</span>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <!-- Project Card 1 -->
+          <div class="project-card" data-project="aura">
+            <div class="project-image-wrap">
+              <img src="assets/project_aura.png" alt="Aura Haute Couture Project" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div>
+                <h3 class="project-title">AURA HAUTE COUTURE</h3>
+                <div class="project-meta">Brand Identity & Digital Experience</div>
+              </div>
+              <span class="project-year">2025</span>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card" data-project="neura">
+            <div class="project-image-wrap">
+              <img src="assets/project_neura.png" alt="Neura AI Suite Project" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div>
+                <h3 class="project-title">NEURA AI SUITE</h3>
+                <div class="project-meta">UI/UX Design System & Product Web App</div>
+              </div>
+              <span class="project-year">2025</span>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card" data-project="verve">
+            <div class="project-image-wrap" style="display:flex; align-items:center; justify-content:center; background:#181818; color:#F6EFC7; padding:40px;">
+              <div style="text-align:center;">
+                <span style="font-family:var(--font-hero); font-size:64px; font-weight:800; letter-spacing:-0.04em;">VERVE</span>
+                <p style="font-family:var(--font-heading); font-size:14px; letter-spacing:0.2em; text-transform:uppercase; margin-top:12px; color:#D6C47A;">EDITORIAL & SWISS PRINT</p>
+              </div>
+            </div>
+            <div class="project-info">
+              <div>
+                <h3 class="project-title">VERVE MAGAZINE</h3>
+                <div class="project-meta">Editorial Layout & Typography Art Direction</div>
+              </div>
+              <span class="project-year">2024</span>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="project-card" data-project="kroma">
+            <div class="project-image-wrap" style="display:flex; align-items:center; justify-content:center; background:#F6EFC7; color:#111111; padding:40px; border-bottom:1px solid rgba(17,17,17,0.1);">
+              <div style="text-align:center;">
+                <span style="font-family:var(--font-hero); font-size:56px; font-weight:800; letter-spacing:-0.04em;">KROMA</span>
+                <p style="font-family:var(--font-heading); font-size:14px; letter-spacing:0.2em; text-transform:uppercase; margin-top:12px;">3D PACKAGING & AD CAMPAIGN</p>
+              </div>
+            </div>
+            <div class="project-info">
+              <div>
+                <h3 class="project-title">KROMA ENERGY</h3>
+                <div class="project-meta">3D Packaging & Performance AD Creatives</div>
+              </div>
+              <span class="project-year">2024</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROCESS TIMELINE SECTION -->
+      <section class="section process-section" id="process">
+        <div class="section-label">
+          <span class="dot"></span> 04 / THE METHODOLOGY
+        </div>
+        <h2 class="section-heading">DESIGN PROCESS</h2>
+
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="process-num">01</div>
+            <h3 class="process-title">Research</h3>
+            <p class="process-desc">Deep dive into brand objectives, user behavior, market trends, and visual landscape analysis.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-num">02</div>
+            <h3 class="process-title">Wireframe</h3>
+            <p class="process-desc">Architecting layout grids, content hierarchy, low-fidelity wireframes, and structural flows.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-num">03</div>
+            <h3 class="process-title">Prototype</h3>
+            <p class="process-desc">Creating high-craft visual designs, custom typography layouts, micro-interactions, and motion prototypes.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-num">04</div>
+            <h3 class="process-title">Development</h3>
+            <p class="process-desc">Translating visual systems into responsive code, exporting pixel-perfect vector assets, and QA testing.</p>
+          </div>
+
+          <div class="process-step">
+            <div class="process-num">05</div>
+            <h3 class="process-title">Launch</h3>
+            <p class="process-desc">Final asset packaging, brand system deployment, guidelines documentation, and continuous refinement.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATISTICS COUNTER SECTION -->
+      <section class="section stats-section" id="stats">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-target="20">0+</div>
+            <div class="stat-label">PROJECTS COMPLETED</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="10">0+</div>
+            <div class="stat-label">GLOBAL BRANDS</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="5">0+</div>
+            <div class="stat-label">YEARS EXPERIENCE</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number" data-target="100">0%</div>
+            <div class="stat-label">SATISFACTION RATE</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+      <section class="section testimonials-section" id="testimonials">
+        <div class="section-label">
+          <span class="dot"></span> 05 / ENDORSEMENTS
+        </div>
+        <h2 class="section-heading">CLIENT FEEDBACK</h2>
+
+        <div class="testimonial-card">
+          <div class="quote-mark">“</div>
+          <p class="testimonial-text">
+            Kirti redefined our brand aesthetic completely. Her mastery over typography, grid structures, and interactive UI created an experience our customers rave about. Truly world-class visual craft.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SC</div>
+            <div>
+              <div class="author-info-name">Sophia Chen</div>
+              <div class="author-info-role">Creative Director, Aura Haute Couture</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION & DARK FOOTER -->
+      <section class="contact-section" id="contact">
+        <div class="section-label" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: var(--bg-cream);">
+          <span class="dot" style="background-color: var(--bg-cream);"></span> 06 / GET IN TOUCH
+        </div>
+
+        <h2 class="contact-heading-large">SEND YOUR REQUEST</h2>
+        <h3 style="font-family: var(--font-heading); font-size: clamp(28px, 4vw, 48px); font-weight: 700; margin-bottom: 40px; color: rgba(255,255,255,0.7);">
+          LET'S DISCUSS YOUR NEXT BIG PROJECT
+        </h3>
+
+        <div class="contact-form-wrap">
+          <form class="email-form" id="contact-form">
+            <input type="email" class="email-input" placeholder="Enter your email address..." required>
+            <button type="submit" class="submit-btn" aria-label="Submit Request">→</button>
+          </form>
+        </div>
+
+        <!-- INFINITE HORIZONTAL MARQUEE -->
+        <div class="marquee-container">
+          <div class="marquee-content">
+            <div class="marquee-item">• LET'S WORK TOGETHER • CREATE ELEVATED EXPERIENCES • LUXURY DESIGN</div>
+            <div class="marquee-item">• LET'S WORK TOGETHER • CREATE ELEVATED EXPERIENCES • LUXURY DESIGN</div>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <div style="font-family: var(--font-hero); font-size: 20px; font-weight: 800; color: var(--bg-cream);">
+            KIRTI GUPTA © 2026
+          </div>
+          <div class="footer-socials">
+            <a href="https://dribbble.com" class="footer-link" target="_blank" rel="noopener">Dribbble</a>
+            <a href="https://behance.net" class="footer-link" target="_blank" rel="noopener">Behance</a>
+            <a href="https://figma.com" class="footer-link" target="_blank" rel="noopener">Figma</a>
+            <a href="https://instagram.com" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://linkedin.com" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Interactive Project Case Study Lightbox Modal -->
+  <div class="project-modal" id="project-modal">
+    <div class="modal-content" id="modal-content">
+      <button class="modal-close" id="modal-close-btn">✕</button>
+      <div class="section-label"><span class="dot"></span> CASE STUDY</div>
+      <h2 id="modal-title" style="font-family: var(--font-hero); font-size: clamp(32px, 5vw, 56px); font-weight: 800; text-transform: uppercase;">PROJECT TITLE</h2>
+      <p id="modal-category" style="font-family: var(--font-heading); font-size: 18px; color: var(--text-muted); font-weight: 600; margin-bottom: 24px;">Category • 2025</p>
+
+      <img id="modal-image" src="" alt="Project Preview" class="modal-hero-img">
+
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; margin-top: 32px;" class="modal-grid">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 22px; font-weight: 700; margin-bottom: 12px;">Overview & Solution</h3>
+          <p id="modal-description" style="font-size: 18px; color: var(--text-muted); line-height: 1.6;">
+            Detailed narrative about the design strategy, creative direction, and technical execution.
+          </p>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 22px; font-weight: 700; margin-bottom: 12px;">Deliverables</h3>
+          <ul id="modal-deliverables" style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-family: var(--font-heading); font-weight: 600;">
+            <li>✓ Visual Brand Strategy</li>
+            <li>✓ Design System & Components</li>
+            <li>✓ High-Fidelity UI Prototypes</li>
+            <li>✓ Multi-Channel AD Assets</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
